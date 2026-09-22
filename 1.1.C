@@ -2,19 +2,47 @@
 #include <stdio.h>
 #include <math.h>
 
-int main() {
-    double x = 1.426;
-    double y = -1.22;
-    double z = 3.5;
+/**
+ * @brief вычисляет значение функции по заданной формуле
+ * @param x - значение переменной х
+ * @param y - значение переменной y
+ * @param z - значение переменной z
+ * @return рассчитанное значение
+ */
+double A(const double x, const double y, const double z);
 
-    double a = (2.0 * cos(x - M_PI / 6.0)) / (0.5 + sin(y) * sin(y));
-    double b = 1.0 + (z * z) / (3.0 + (z * z) / 5.0);
+/**
+ * @brief вычисляет значение функции по заданной формуле
+ * @param x - значение переменной х
+ * @param y - значение переменной y
+ * @param z - значение переменной z
+ * @return рассчитанное значение
+ */
+double B(const double x, const double y, const double z);
 
-    printf("x = %.3f\n", x);
-    printf("y = %.3f\n", y);
-    printf("z = %.3f\n", z);
-    printf("a = %.3f\n", a);
-    printf("b = %.3f\n", b);
+/**
+ * @brief точка входа в программу
+ * @return 0, если программа выполнена корректно, иначе не 0
+ */
+int main()
+{
+    const double x = 2;
+    const double y = 0.7;
+    const double z = -1;
+    printf("A = %lf\n",A(x,y,z));
+    printf("B = %lf",B(x,y,z));
 
     return 0;
+}
+
+double A(const double x, const double y, const double z)
+{
+    return cbrt(x*y*z) + fabs(z*sin(y));
+}
+// cbrt() - вычисляет кубический корень 
+// fabs() - вычисляет модуль 
+
+double B(const double x, const double y, const double z)
+{
+    return y * cos(x*z*sin(y))+3;
 }
