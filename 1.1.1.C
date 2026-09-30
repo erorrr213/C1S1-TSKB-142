@@ -36,7 +36,7 @@ int main()
 
 double A(const double x, const double y, const double z)
 {
-    return cbrt(x*y*z) + fabs(z*sin(y));
+    return cbrt((x*y*z) + fabs(z*sin(y)));
 }
 // cbrt() - вычисляет кубический корень 
 // fabs() - вычисляет модуль 
