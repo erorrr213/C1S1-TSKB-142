@@ -1,26 +1,26 @@
 #include <stdio.h>
 #include <math.h>
 
-
-double mb(const double bytes);
 /**
  * @brief переводит байты в мегабайты
  * @param bytes обьем информации в байтах
  * @return обьем информации в мегабайтах
  */
+double mb(const double bytes);
 
-double gb(const double bytes);
 /**
  * @brief переводит байты в мегабайты
  * @param bytes обьем информации в байтах
  * @return обьем информации в гигабайтах
  */
+double gb(const double bytes);
 
-double getDouble();
 /**
- * @brief Точка входа в программу
+ * @brief считывает значение с плавающей точкой
  * @return 0, если программа выполнена корректно, иначе не 0
  */
+double getDouble();
+
 
 int main()
 {
@@ -36,11 +36,14 @@ double mb(const double bytes)
     return (bytes / pow(1024,2));
 }
 
+//pow возводит число в степень
 double gb(const double bytes)
 {
     return (bytes / pow(1024,3));
 }
-//pow возводит число в степень
+
+// value - значение в байтах
+// @return возвращает значение value уже в мегабайтах и гигабайтах
 
 double getDouble()
 {
@@ -48,5 +51,4 @@ double getDouble()
     scanf("%lf", &value);
     return value;
 }
-// value - значение в байтах
-// @return возвращает значение value уже в мегабайтах и гигабайтах
+
