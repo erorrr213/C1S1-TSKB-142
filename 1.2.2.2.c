@@ -36,17 +36,16 @@ int main()
 
 double mb(const double bytes)
 {
-    return (bytes / pow(1024,2));
+    return (bytes / 1048576);
 }
 
 //pow возводит число в степень
 double gb(const double bytes)
 {
-    return (bytes / pow(1024,3));
+    return (bytes / 1073741824);
 }
 
-// value - значение в байтах
-// @return возвращает значение value уже в мегабайтах и гигабайтах
+
 
 double getDouble()
 {
