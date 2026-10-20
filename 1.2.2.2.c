@@ -21,7 +21,10 @@ double gb(const double bytes);
  */
 double getDouble();
 
-
+/**
+ * @brief точка входа в программу
+ * @return 0, если программа выполнена корректно, иначе не 0
+ */
 int main()
 {
     
