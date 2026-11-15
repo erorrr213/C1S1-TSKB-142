@@ -2,16 +2,10 @@
 
 /**
  * @brief Ввод сопротивления резистора
- * @return Введенное значение сопротивления
+ * @param number Номер резистора
+ * @return Введенное сопротивление
  */
-double getResistance(int number) {
-    double resistance = 0.0;
-
-    printf("Введите R%d: ", number);
-    scanf("%lf", &resistance);
-
-    return resistance;
-}
+double getResistance(int number);
 
 /**
  * @brief Расчет общего сопротивления
@@ -20,13 +14,7 @@ double getResistance(int number) {
  * @param R3 Сопротивление третьего резистора
  * @return Общее сопротивление
  */
-double calculateResistance(double R1, double R2, double R3) {
-    double R = 0.0;
-
-    R = R1 + R2 + R3;
-
-    return R;
-}
+double calculateResistance(double R1, double R2, double R3);
 
 /**
  * @brief Основная функция программы
@@ -50,4 +38,27 @@ int main(void) {
     printf("Общее сопротивление: %.2f Ohm\n", R);
 
     return 0;
+}
+
+/**
+ * @brief Реализация функции ввода сопротивления
+ */
+double getResistance(int number) {
+    double resistance = 0.0;
+
+    printf("Введите R%d: ", number);
+    scanf("%lf", &resistance);
+
+    return resistance;
+}
+
+/**
+ * @brief Реализация функции расчета общего сопротивления
+ */
+double calculateResistance(double R1, double R2, double R3) {
+    double R = 0.0;
+
+    R = R1 + R2 + R3;
+
+    return R;
 }
