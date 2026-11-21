@@ -43,7 +43,7 @@ int main(void) {
 /**
  * @brief Реализация функции ввода сопротивления
  */
-double getResistance(int number) {
+double getResistance(const int number) {
     double resistance = 0.0;
 
     printf("Введите R%d: ", number);
@@ -55,7 +55,7 @@ double getResistance(int number) {
 /**
  * @brief Реализация функции расчета общего сопротивления
  */
-double calculateResistance(double R1, double R2, double R3) {
+double calculateResistance(const double R1, const double R2, const double R3) {
     double R = 0.0;
 
     R = R1 + R2 + R3;
