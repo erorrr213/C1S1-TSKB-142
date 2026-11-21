@@ -5,7 +5,7 @@
  * @param number Номер резистора
  * @return Введенное сопротивление
  */
-double getResistance(int number);
+double getResistance(const int number);
 
 /**
  * @brief Расчет общего сопротивления
@@ -43,7 +43,7 @@ int main(void) {
 /**
  * @brief Реализация функции ввода сопротивления
  */
-double getResistance(const int number) {
+double getResistance(int number) {
     double resistance = 0.0;
 
     printf("Введите R%d: ", number);
