@@ -5,7 +5,7 @@
  * @brief Выводит пожелание в зависимости от времени суток
  * @param hour Час суток
  */
-void printGreeting(int hour);
+void printGreeting(const int hour);
 
 /**
  * @brief Основная функция программы
