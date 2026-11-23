@@ -14,7 +14,7 @@ double getResistance(const int number);
  * @param R3 Сопротивление третьего резистора
  * @return Общее сопротивление
  */
-double calculateResistance(double R1, double R2, double R3);
+double calculateResistance(const double R1, const double R2, const double R3);
 
 /**
  * @brief Основная функция программы
@@ -43,7 +43,7 @@ int main(void) {
 /**
  * @brief Реализация функции ввода сопротивления
  */
-double getResistance(int number) {
+double getResistance(const int number) {
     double resistance = 0.0;
 
     printf("Введите R%d: ", number);
